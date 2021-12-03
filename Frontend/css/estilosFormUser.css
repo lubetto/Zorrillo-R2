@@ -1,0 +1,20 @@
+.aviso_error{
+    display: none;
+}
+.aviso_error_correcto{
+    display: block;
+}
+.error{
+    color: rgb(204, 27, 27);
+    border-radius: 8px;
+    
+}
+.error span{
+    padding: 8px;
+}
+p{
+    display: none;
+}
+.tipo{
+    width: 250px;
+}

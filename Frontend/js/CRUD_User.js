@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 //METODO AGREGAR (post) UN USUARIO
 function agregarCliente(){
-    
+
     var datos = {
         identification:$("#numeroIdentidad").val(),
         name:$("#nombres").val(),
@@ -28,7 +28,7 @@ function agregarCliente(){
             alert("Usuario guardado con exito");
         },
         error: function(jqXHR, textStatus, errorThrown) {
-              window.location.reload()
+            window.location.reload()
             alert("No se guardo correctamente");
         }
         });
@@ -48,7 +48,7 @@ function GetAllUsers(){
     });
 }
 function listarUsuarios(respuesta){
-    
+
     var myTable=`<table class=" table table-secondary" border="2">
                 <tr>
                 <th>NumeroIdentidad</th>
@@ -98,7 +98,7 @@ function borrarUsuario(id){
             alert("Cliente borrado con exito.")
         }
     });
-} 
+}
 
 // Metodo editar (put) un usuario
 function editarCliente(id){
@@ -120,7 +120,6 @@ function editarCliente(id){
                 $("#email").val(respuesta.email),
                 $("#password").val(respuesta.password),
                 $("#zonaAsignada").val(respuesta.zone)
-                
         },
         error:function(xhr,status){
             console.log(status);
@@ -143,7 +142,7 @@ function actualizarCliente(){
         zone:$("#zonaAsignada").val(),
         type:$('select option:selected').val()
     };
-    
+
     let dataToSend=JSON.stringify(datos);
     $.ajax({
         url:"http://localhost:8080/api/user/update",

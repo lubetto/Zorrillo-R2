@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/fragance")
+@CrossOrigin("*")
 public class FraganceControlador {
     @Autowired
     private FraganceServicio fraganceServicio;
